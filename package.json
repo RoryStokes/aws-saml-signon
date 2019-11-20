@@ -1,0 +1,73 @@
+{
+  "name": "aws-saml-signon",
+  "version": "1.0.0",
+  "description": "Generate AWS credentials via SAML SSO",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": "https://github.com/RoryStokes/aws-saml-signon",
+  "author": "Rory Stokes",
+  "devDependencies": {
+    "@types/configstore": "^4.0.0",
+    "@types/inquirer": "^6.5.0",
+    "@types/xml2js": "^0.4.5",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron-compile": "^6.4.4",
+    "electron-forge": "^5.2.4",
+    "electron-prebuilt-compile": "4.0.0",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.0"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "dependencies": {
+    "aws-sdk": "^2.574.0",
+    "configstore": "^5.0.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "inquirer": "^7.0.0",
+    "rxjs": "^6.5.3",
+    "xml2js": "^0.4.22"
+  },
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "yarn"
+      },
+      "electronWinstallerConfig": {
+        "name": "aws_saml_signon"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "awssamlsignon"
+      }
+    }
+  }
+}
