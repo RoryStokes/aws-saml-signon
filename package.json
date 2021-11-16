@@ -28,7 +28,7 @@
     "bin"
   ],
   "dependencies": {
-    "aws-sdk": "^2.574.0",
+    "aws-sdk": "^2.814.0",
     "configstore": "^5.0.0",
     "inquirer": "^7.0.0",
     "rxjs": "^6.5.3",
